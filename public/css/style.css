@@ -201,9 +201,11 @@ footer a{
   margin-bottom: 5px;
   height: 40px;
   font-weight: bold;
+  font-family: Georgia;
   font-size: 15px;
 }
 .bookauthor{
+  font-size:20px;
   position: relative;
   bottom: 0;
 }
@@ -252,19 +254,13 @@ ul {
   margin-right: auto;
   margin-top: 100px;
   width: 400px;
-  /*height: 250px;*/
   display: block;
   z-index: 4;
   position: relative;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
-}
-
-.logotext {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
+  text-shadow: 2px 2px #72B87D;
 }
 
 .mainLogo {
@@ -473,4 +469,8 @@ footer a:active  {
   display: inline-block;
   font-weight: bold;
   font-family: 'arial', 'sans-serif';
+}
+
+.amazonInfo {
+  margin-top: 20px
 }

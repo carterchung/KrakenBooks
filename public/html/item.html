@@ -2,24 +2,17 @@
   <div id='itemLeft'>
     <img src={{item.img}}>
     <!-- Amazon Info -->
-    <h3>{{item.awsInfo.Title}}</h3>
-    <a ng-href="{{item.awsInfo.URL}}">Compare on Amazon</a>
-    <span>Price on Amazon: {{item.awsInfo.ListPrice}}</span>
+    <h3 class="amazonInfo">{{item.awsInfo.Title}}</h3>
+    <p class="amazonInfo">Price on Amazon: {{item.awsInfo.ListPrice}}</p>
+    <p class="amazonInfo"><a ng-href="{{item.awsInfo.URL}}">Compare on Amazon</a></p>
     <!-- End Amazon Info -->
   </div>
   <div id='itemMiddle'>
     <div class="b-title"> {{item.name}} </div>
     <div class="m-title">{{item.bookDetails.title}}</div>
     <div class="m-title">{{item.bookDetails.author}}</div>
-    <div class="s-title" ng-repeat="price in prices">
-      <span class="bookstore">{{price.store_id}}</span>
-      <span class="bookprice">${{price.price}}</span>
-    </div>
     <p>Seller's asking price: {{ item.askingPrice | currency }}</p>
     <p>Seller's Description: {{ item.description }}</p>
-  </div>
-</div>
-<div>
   <div ng-controller="MailController">
     <button ng-click="toggleMsgModal()" class="btn btn-default">Send Offer</button>
     <modal show='modalMsgShown' width='750px'>
@@ -37,3 +30,10 @@
       </form>
     </modal>
   </div>
+    <div class="s-title" ng-repeat="price in prices">
+      <span class="bookstore">{{price.store_id}}</span>
+      <span class="bookprice">${{price.price}}</span>
+    </div>
+  </div>
+</div>
+<div>
